@@ -1,0 +1,598 @@
+*{
+margin: 0%;
+padding: 0%;
+}
+
+                /*header */
+.header{
+    background-color: #242c42;
+    width: cover;
+    height: 50px;
+}
+
+           /*menu container*/
+ /* contain #logo at the left and #nevegation on the right*/          
+.main{
+    background-color:white;
+    width: cover;
+    height: 100px;
+    position: sticky;
+    top: 0%;
+}
+/*logo*/
+.logo{
+    background-image: url(images/logo/FoundLayEducation_Logo.png);
+    float: left;
+   width: 50%;
+   height: 100px;
+   background-size: 250px 50px;
+   background-repeat: no-repeat;
+   background-position-x: 80px;
+   background-position-y: 30px;
+}
+/*nevegation*/
+ul{
+    display: inline-table;
+    float: right;
+    padding: 20px 10px;   
+}
+li{
+    display: inline;
+    padding: 10px 10px;
+    text-decoration: none;
+    line-height: 50px;
+}
+ul li a{
+    color:#242c42;
+    text-decoration: none;  
+}
+ul li a:hover{
+    color:bisque;
+    text-decoration: none;
+}
+
+              /* first container*/
+div.banner{
+    background-image: url(images/banners1/banner33.jpg);
+    width: cover;
+    height: 600px;
+    background-size: 100% 600px;
+    clear: both;
+    
+}
+.banner h5{
+    color:black;
+    padding:200px 0px 0px 100px;
+    font-size: 26px;
+    
+}
+.banner h1{
+    color:black;
+    padding:0px 0px 0px 100px;
+    font-size: 46px;
+}
+
+.banner p{
+    color:black;
+    padding:0px 0px 0px 100px;
+    font-size: 20px;
+}
+
+              /* second container*/
+.content1{
+    width: cover;
+    height: 400px;
+    background-color: transparent;
+}
+.content1_image{
+    width: 600px;
+    height: 250px;
+    float: left;
+}
+.content1_image img{
+  padding-left: 20px;
+}
+.content1_content{
+    width: 700px;
+    height: 400px;
+    float: left;
+padding-top: 20px;
+}
+.content1_content p{
+    color: #242c42;
+}
+
+                      /* third container*/
+.third_container{
+    background-image: url(images/background-count-number.png);
+    width: cover;
+    height: 600px;
+    clear: both;
+}
+.third_first_container{
+    width:cover;
+    height:200px;
+    text-align: center;
+
+}
+.third_first_container h1{
+    color:white;
+    padding: 120px 0px 0px 0px;
+}
+.third_second_container{
+    width:cover;
+    height:200px;
+  
+}
+.third_second_f_container{
+    width: 33.33%;
+    height:200px;
+    
+    float: left;
+
+}
+.third_second_f_container img{
+    padding: 0px 0px 0px 180px;
+}
+.third_second_f_container p{
+    padding:10px 50px 10px 50px;
+}
+.third_second_s_container{
+    width: 33.33%;
+    height: 200px;
+ 
+    float: left;
+}
+.third_second_s_container img{
+    padding:0px 0px 0px 180px;
+}
+.third_second_s_container p{
+    padding:10px 50px 10px 50px;
+}
+.third_second_t_container{
+    width: 33.33%;
+    height: 200px;
+   
+float: left;
+}
+.third_second_t_container img{
+    padding: 0px 0px 0px 180px;
+}
+.third_second_t_container p{
+    padding: 10px 50px 10px 50px;
+}
+
+
+.third_third_container{
+    width:cover;
+    height:200px;
+    text-align: center;
+}
+.third_third_container h1{
+    color:white;
+}
+
+                     /*fourth container*/
+.fourth_container{
+    width: cover;
+    height:1000px;
+
+}
+.fourth_content{
+    width:cover;
+    height: 400px;
+    
+    text-align: center;
+}
+.fourth_content h2{
+    color:#4F5B6B;
+    padding: 90px 0px 0px 0px;
+}
+.fourth_content h4{
+    color:#4F5B6B;
+    padding: 20px 0px 0px 0px;
+}
+.fourth_content p{
+    color:#4F5B6B;
+    padding: 10px 300px 0px 300px;
+}
+.fourth_icons{
+    width: cover;
+    height: 600px;
+    
+}
+.fourth_icons img{
+    width: 100%;
+    height: 500px;
+}
+
+                          /* fifth container*/
+.fifth_container{
+    background-color:#242c42;
+    width: cover;
+    height: 1800px;
+}
+h1{
+    color: yellowgreen;
+}
+p{
+    color: aliceblue;
+}
+/*fifth first container*/
+.fifth_first_container{
+    background-image: url(images/institute/institute_banner.jpg);
+    width: cover;
+    height: 600px;
+    background-size: 100% 600px;
+    opacity: 0.7;
+}
+.fifth_first_f_container{
+    width: cover;
+    height: 300px;
+    background-color: #242c42;
+}
+.fifth_first_f_content{ 
+    width: 900px;
+    height: 200px;
+    padding: 60px 20px 0px 80px;
+    float: left;
+}
+.fifth_first_f_image{
+    float: left;
+    width: 200px;
+    height: 200px;  
+}
+.fifth_first_s_container p{
+    color:black;
+    padding: 40px 100px 20px 100px;
+    float: left;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+/*fifth second container*/
+.fifth_second_container{
+    background-image: url(images/corporate/Banner.jpg);
+    width: cover;
+    height: 600px;
+    background-size: 100% 600px;
+    opacity: 0.7;
+}
+.fifth_second_f_container{
+    background-color: #242c42;
+    width: cover;
+    height: 300px;
+}
+.fifth_second_f_content{
+    width: 900px;
+    height: 200px;
+    float: left;
+    padding: 60px 20px 0px 80px;
+}
+.fifth_second_f_image{
+width: 200px;
+height: 200px;
+float: left;
+}
+.fifth_second_s_container p{
+    color:black;
+    padding: 40px 100px 20px 100px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+/*fifth third container*/
+.fifth_third_container{
+    background-image: url(images/whyITUpworks/sub-wicked.jpg);
+    width: cover;
+    height: 600px;
+    opacity: 0.7;
+}
+.fifth_third_f_container{
+    background-color: #242c42;
+    width: cover;
+    height: 300px;
+}
+.fifth_third_f_content{
+    width: 900px;
+    height: 200px;
+    float: left;
+    padding: 60px 20px 0px 80px;
+}
+.fifth_third_f_image{
+width: 200px;
+height: 200px;
+float: left;
+}
+.fifth_third_s_container p{
+    color:black;
+    padding: 40px 80px 20px 80px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+                     /*six container*/
+.six_container{
+    width: cover;
+    height: 1200px;
+    
+}
+.six_first_container{
+    width: cover;
+    height: 200px;
+    
+}
+.six_first_container p{
+    text-align: center;
+    color: #4F5B6B;
+    padding: 40px 0px 10px 0px;
+}
+.six_first_container h1{
+    text-align: center;
+    color: #4F5B6B
+}
+.six_second_container{
+    width:cover;
+    height:450px;
+
+}
+.six_second_image{
+    width: 50%;
+    height: 450px;
+    
+    float: left;
+}
+.six_second_image img{
+    width: cover;
+    height:380px;
+    float: right;
+
+}
+.six_second_content{
+    width: 50%;
+    height: 450px;
+    
+    float: left;
+}
+.six_second_content h3{
+    color: #4F5B6B;
+    font-size: 30px;
+    padding: 60px 50px 0px 10px;
+}
+.six_second_content p{
+    color: #4F5B6B;
+    padding: 30px 80px 0px 10px;
+} 
+
+.six_third_container{
+    width: cover;
+    height:450px;
+  
+}
+.six_third_image{
+    width: 50%;
+    height: 450px;
+    
+    float: left;
+}
+.six_third_image img{
+    width: cover;
+    height:380px;
+    float: right;
+}
+.six_third_content{
+    width: 50%;
+    height:450px;
+    
+    float: left;
+}
+.six_third_content h3{
+    color: #4F5B6B;
+    font-size: 30px;
+    padding: 60px 50px 0px 10px;
+}
+.six_third_content p{
+color: #4F5B6B;
+padding: 30px 80px 0px 10px;
+} 
+.six_fourth_container{
+    width:cover;
+    height:100px;
+ 
+}
+.six_fourth_container h2{
+    color: #4F5B6B;
+    text-align: center;
+}
+
+                      /*seven container*/
+.seven_container{
+    width:cover;
+    height:700px;
+  background-image: url(images/leadership_team/leadership_banner2.jpg);
+  background-size: 100% 700px;
+  background-attachment: fixed;
+}
+.seven_first_container{
+    width:cover;
+    height: 200px;
+    
+    text-align: center;
+}
+.seven_first_container p{
+    padding-top: 70px;
+color: white;
+
+}
+.seven_first_container h1{
+color: white;
+}
+.seven_second_container{
+    width: cover;
+    height:500px;
+  
+    
+}
+.seven_second_f_container{
+    width: 33.33%;
+    height:500px;
+    text-align: center;
+    float: left;
+    font-size: 20px;
+}
+.seven_second_f_container img{
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px 20px 140px;
+}
+.sachin_second_f_container p{
+    color: white;
+    
+}
+.seven_second_s_container{
+    width: 33.33%;
+    height:500px;
+    text-align: center;
+    float: left;
+    font-size:20px;
+}
+.seven_second_s_container img{
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px 20px 70px;
+}
+.seven_second_s_container p{
+    color: white;
+
+}
+.seven_second_t_container{
+    width: 33.33%;
+    height: 500px;
+    float: left;
+  text-align: center;
+  font-size:20px;
+}
+.seven_second_t_container img{
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px 20px 10px;
+}
+.seven_second_t_container p{
+    color: white;
+
+}
+
+                       /*eight container*/
+.eight_container{
+    width:cover;
+    height:150px;
+   background-color: #86bc42;
+}
+.eight_first_container{
+    width:1100px;
+    height:150px;
+    
+    float: left;
+}
+.eight_first_container h1{
+    color: #4F5B6B;
+    padding:50px 0px 0px 60px;
+}
+.eight_first_container p{
+    color:#4F5B6B;
+    padding: 0px 0px 0px 60px;
+}
+
+.eight_second_container{
+    width: 249px;
+    height: 150px;
+    float: left;
+    
+}
+.eight_second_container h5{
+    color:#4F5B6B;
+    float:right;
+    margin:70px 85px 0px 0px;
+    padding: 5px 20px 5px 20px;
+    outline: 5px solid#242c42;
+}
+
+                         /*nine container*/
+.nine_container{
+    width:cover;
+    height:400px;
+    background-color:#242c42;
+}
+.nine_first_container{
+    width: 33.33%;
+    height: 400px;
+    background-color: #242c42;
+    float:left;
+}
+.nine_first_container h1{
+    margin: 100px 0px 0px 40px;
+}
+.nine_first_container p{
+    padding: 20px 30px 20px 40px;
+}
+.nine_second_container{
+    width:33.33%;
+    height:400px;
+    background-color:#242c42;
+    float: left;
+   
+}
+.nine_second_container h1{
+    margin-top: 100px;
+    margin-left:40px;
+
+}
+.nine_second_container p{
+    padding: 20px 20px 20px 40px;
+}
+
+.nine_third_container{
+    width:33.33%;
+    height:400px;
+    background-color:#242c42;
+    float: left;
+}
+.nine_third_container h1{
+    margin: 100px 0px 0px 40px;
+}
+.nine_third_container p{
+    padding: 20px 20px 20px 40px;
+}
+                 
+                         /*footer*/
+ .footer{
+     width:cover;
+     height:50px;
+     background-color:#242c42;
+    border:2px solid #4F5B6B;
+ }
+ /* footer left*/
+ .footer ul{
+     display: inline-table;
+     color: #86bc42;
+     float: left;
+    padding: 0px 0px 0px 40px;
+ }
+ .footer ul li{
+     display: inline;
+     line-height: 50px;
+     padding: 0px 5px 0px 5px;
+ }
+ .footer ul li a{
+     color:#4F5B6B;
+     text-decoration: none;
+     font-size:10px;
+ }
+ /*footer right*/
+ .footer_right p{
+     float:right;
+     color:#4F5B6B;
+     font-size: 12px;
+     line-height: 50px;
+     padding-right:90px;
+ }
