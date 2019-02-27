@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>ThinkYard | Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LIBRARY FONT-->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300">
+    <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-awesome-4.4.0/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-svg/css/Glyphter.css">
+    <!-- LIBRARY CSS-->
+    <link type="text/css" rel="stylesheet" href="assets/libs/animate/animate.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/bootstrap-3.3.5/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/owl-carousel-2.0/assets/owl.carousel.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/selectbox/css/jquery.selectbox.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox-buttons.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/media-element/build/mediaelementplayer.min.css">
+    <!-- STYLE CSS    -->
+    <link type="text/css" rel="stylesheet" href="assets/css/color-1.css" id="color-skins">
+    <!--link(type="text/css", rel='stylesheet', href='#', id="color-skins")-->
+    <script src="assets/libs/jquery/jquery-2.1.4.min.js"></script>
+    <script src="assets/libs/js-cookie/js.cookie.js"></script>
+    <!--script.--><!--    if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1')) {--><!--        $('#color-skins').attr('href', 'assets/css/' + Cookies.get('color-skin') + '.css');--><!--    } else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1')) {--><!--        $('#color-skins').attr('href', 'assets/css/color-1.css');--><!--    }--></head>
+<body>
+    <!-- script for modal pop up when clicked on enquir now & become an instructor -->
+        <script>
+                function becomeFocus() {
+                    $('#bname').focus();
+                    }
+                function become_An_Instructor(){
+                    var name = document.getElementById("bname").value;
+                    var email = document.getElementById("bemail").value;
+                    var mobile = document.getElementById("bmobile").value;
+                    var Expertise = document.getElementById("bExpertise").value;
+                    $.ajax({
+                        url: "Become_An_Instructor.php",
+                        data:{
+                        'name':name,
+                        'email':email,
+                        'mobile':mobile,
+                        'expertise':Expertise
+                        },
+                        type: "POST",
+                        success: function(data){
+                        $data=JSON.parse(data);
+                        $("#bmyform").html($data);
+                        document.getElementById("bname").readOnly = true;
+                        document.getElementById("bemail").readOnly = true;
+                        document.getElementById("bmobile").readOnly = true;
+                        document.getElementById("bExpertise").readOnly = true;
+                        },
+                        
+                    });
+                }
+                </script>
+                <script>
+                function enrollFocus() {
+                    $('#ename').focus();
+                    }
+                function enroll_now(){
+                    var name = document.getElementById("ename").value;
+                    var email = document.getElementById("eemail").value;
+                    var mobile = document.getElementById("emobile").value;
+                    var course = document.getElementById("course_name").value; 
+                    var course = document.getElementById("course_applied_for").value; 
+                    $.ajax({
+                        url: "Enroll_now.php",
+                        data:{
+                        'name':name,
+                        'email':email,
+                        'mobile':mobile,
+                        'course':course,
+                        'course_applied_for':course_applied_for
+                        },
+                        type: "POST",
+                        success: function(data){
+                        $data=JSON.parse(data);
+                        $("#emyform").html($data);
+                        document.getElementById("ename").readOnly = true;
+                        document.getElementById("eemail").readOnly = true;
+                        document.getElementById("emobile").readOnly = true;
+                        document.getElementById("course_name").readOnly = true;
+                        document.getElementById("course_applied_for").readOnly = true;
+                        },
+                        
+                    });
+                }
+                </script>
+                <script>
+                document.addEventListener('keyup', function(e) {
+                if (e.keyCode == 27) {
+                //alert('fsdf');
+                    document.getElementById('enroll_now').style.display = "none";
+                }
+            });
+            $(document).on('open', '.modal', function () {
+                $('input').attr('tabindex', "-1");
+                $('.modal-body input').each(function(index, input) {
+                    input.tabIndex = index + 1;
+                });
+            });
+            
+            $(document).on('close', '.modal', function () {
+                $('input').each(function(index, input) {
+                    input.tabIndex = index + 1;
+                 });
+            });
+            
+                </script>
+        <!-- End script for modal pop up when clicked on enquir now & become an instructor -->
+
+    <!-- HEADER-->
+<header>
+    <div class="header-topbar">
+        <div class="container">
+            <div class="topbar-left pull-left">
+                <div class="email"><a href="#"><i class="topbar-icon fa fa-envelope-o"></i><span>info@thethinkyard.com</span></a></div>
+                <div class="hotline"><a href="#"><i class="topbar-icon fa fa-phone"></i><span>0120 4325 907</span></a></div>
+            </div>
+            <div class="topbar-right pull-right">
+                <div class="socials">
+                    <a href="https://www.facebook.com/ThinkYard-Pvt-Ltd-567033887147374/?modal=admin_todo_tour" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/thinkyard-thinkyard-a9b512180/" target="_blank" class="google"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://twitter.com/YardThink" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <!-- <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a> -->
+                    <!-- <a href="#" class="blog"><i class="fa fa-rss"></i></a> -->
+                    <!-- <a href="#" class="dribbble"><i class="fa fa-dribbble"></i></a> -->
+                </div>
+                <!-- <div class="group-sign-in"><a href="login.html" class="login">login</a><a href="register.html" class="register">register</a></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="header-main homepage-01">
+        <div class="container">
+            <div class="header-main-wrapper">
+                <div class="navbar-heade">
+                    <div class="logo pull-left"><a href="index.html" class="header-logo"><img src="assets/images/logo-color-1.png" alt=""/></a></div>
+                    <button type="button" data-toggle="collapse" data-target=".navigation" class="navbar-toggle edugate-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <nav class="navigation collapse navbar-collapse pull-right">
+                    <ul class="nav-links nav navbar-nav">
+                            <li><a href="index.html" class="main-menu active">Home</a></li>  <!--added new-->
+                        <!-- <li class="dropdown"><a href="javascript:void(0)" class="main-menu">Home<span class="fa fa-angle-down icons-dropdown"></span></a>
+                            <ul class="dropdown-menu edugate-dropdown-menu-1">
+                                <li><a href="index.html" class="link-page">Home page 01</a></li>
+                                <li><a href="homepage-02.html" class="link-page">Home page 02</a></li>
+                                <li><a href="homepage-03.html" class="link-page">Home page 03</a></li>
+                            </ul>
+                        </li> -->
+                                  <!-- <li class="dropdown"><a href="javascript:void(0)" class="main-menu">Home<span class="fa fa-angle-down icons-dropdown"></span></a>
+                            <ul class="dropdown-menu edugate-dropdown-menu-1">
+                                <li><a href="index.html" class="link-page">Home page 01</a></li>
+                                <li><a href="homepage-02.html" class="link-page">Home page 02</a></li>
+                                <li><a href="homepage-03.html" class="link-page">Home page 03</a></li>
+                            </ul>
+                        </li> -->
+                        <li class="dropdown "><a href="javascript:void(0)" class="main-menu">Courses<span
+                            class="fa fa-angle-down icons-dropdown"></span></a>
+                            <ul class="dropdown-menu edugate-dropdown-menu-1">
+                                <li><a href="courses.html" class="link-page">Technology</a></li>
+                                <li><a href="digitalmarkating.html" class="link-page">Digital Markating</a></li>
+                                <li><a href="softskill.html" class="link-page">Soft Skill</a></li>
+                                <li><a href="courses.html" class="link-page">Academic Program</a></li>
+                                <li><a href="courses.html" class="link-page">Full Stack Development</a></li>
+                                <li><a href="courses.html" class="link-page">Certified Course</a></li>
+
+                            </ul>
+                </li>
+                <li><a href="index.html" class="link-page main-menu">Internship</a></li>
+
+                <!-- <li class="dropdown"><a href="javascript:void(0)" class="main-menu">gallery<span
+                            class="fa fa-angle-down icons-dropdown"></span></a>
+                    <ul class="dropdown-menu edugate-dropdown-menu-1">
+                        <li><a href="gallery-3column.html" class="link-page">gallery 3 column</a></li>
+                        <li><a href="gallery-4column.html" class="link-page">gallery 4 column</a></li>
+                        <li><a href="gallery-masonry.html" class="link-page">gallery masonry</a></li>
+                    </ul>
+                </li> -->
+                <li class="dropdown"><a href="javascript:void(0)" class="main-menu">Resource<span
+                            class="fa fa-angle-down icons-dropdown"></span></a>
+                    <ul class="dropdown-menu edugate-dropdown-menu-1">
+                        <li><a href="index.html" class="link-page">Event</a></li>
+                        <li><a href="index.html" class="link-page">Practical Assignment </a></li>
+                        <!-- <li><a href="about-us.html" class="link-page">about us</a></li> -->
+                        <li><a href="index.html" class="link-page">Webinar</a></li>
+                        <!-- <li><a href="index.html" class="link-page">Work Shop</a></li> -->
+                        <li><a href="index.html" class="link-page">Blog</a></li>
+                        <li><a href="index.html" class="link-page">FAQ </a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="news-detail.html" class="link-page main-menu">Placement</a></li> -->
+
+                <!-- <li class="dropdown"><a href="javascript:void(0)" class="main-menu">News<span
+                            class="fa fa-angle-down icons-dropdown"></span></a>
+                    <ul class="dropdown-menu edugate-dropdown-menu-1">
+                        <li><a href="news.html" class="link-page">news list</a></li>
+                        <li><a href="news-grid.html" class="link-page">news grid</a></li>
+                        <li><a href="news-grid-nonsidebar.html" class="link-page">news grid nonsidebar</a>
+                        </li>
+                        <li><a href="news-masonry.html" class="link-page">news masonry</a></li>
+                        <li><a href="news-detail.html" class="link-page">news detail</a></li>
+                    </ul>
+                </li> -->
+                <li class="dropdown"><a href="javascript:void(0)" class="main-menu">Service<span
+                    class="fa fa-angle-down icons-dropdown"></span></a>
+            <ul class="dropdown-menu edugate-dropdown-menu-1">
+                <!-- <li><a href="#campustraining" class="link-page">Campus training</a></li> -->
+                <li><a href="index.html#campustraining" class="link-page">Campus training</a></li>
+
+                <!-- <li><a href="gallery-4column.html" class="link-page">Classroom Training programs</a></li> -->
+                <li><a href="index.html#classroomtraining" class="link-page">Classroom Training </a></li>
+
+                <!-- <li><a href="gallery-4column.html" class="link-page">Corporate Training</a></li> -->
+                <li><a href="index.html#corporatetraining" class="link-page">Corporate Training</a></li>
+
+            </ul>
+        </li>
+
+                        <li class="active"><a href="contact.html" class="main-menu">Contact</a></li>
+                        <!-- <li class="button-search"><p class="main-menu"><i class="fa fa-search"></i></p></li>
+                        <div class="nav-search hide">
+                            <form><input type="text" placeholder="Search" class="searchbox"/>
+                                <button type="submit" class="searchbutton fa fa-search"></button>
+                            </form>
+                        </div> -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+            
+<!-- WRAPPER Modal popup box when click become an instructor-->
+<div class="modal  bg-w-form contact-form" id="become_an_instructor" role="dialog" >
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <form action="Become_An_Instructor.php" method="POST" onsubmit="become_An_Instructor();return false" >
+             <div class="modal-header"> 
+             <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">×</button>
+              <h3><center>Apply Now!</center></h3>
+             </div>
+             <div class="row">
+             <div class="modal-body col-md-10 col-md-offset-1">
+               <div class="modal-body col-md-6">
+               <label for="regname" class="control-label form-label ">Name <span class="highlight">*</span></label><input name="name" id="bname" type="text" placeholder="" required class="form-control form-input" style="border:1px solid black; background-color:  lightgray;"  /><!--p.help-block Warning !-->
+               </div>
+               <div class="modal-body col-md-6"><label for="regemail" class="control-label form-label">Email <span class="highlight">*</span></label><input name="email" id="bemail" type="email" placeholder="" class="form-control form-input" style="border:1px solid black; background-color:  lightgray;" required />
+               </div>
+               <div class="modal-body col-md-6"><label for="regpassword" class="control-label form-label">Mobile No. <span class="highlight">*</span></label><input name="mobile" id="bmobile"type="number"  min="0" max="10000000000" placeholder="" class="form-control form-input" style="border:1px solid black; background-color:  lightgray;" required/>
+               </div>
+               <div class="modal-body col-md-6">
+               <label for="regpassword" class="control-label form-label">Your Expertise<span class="highlight">*</span></label><input name="expertise" id="bExpertise" type="text" placeholder="skills like....java, php, any other" class="form-control form-input" style="border:1px solid black; background-color:  lightgray;" required/>
+               </div>
+               
+                <div class="modal-body col-md-6 col-md-offset-2 ">
+                <input type="submit" name="submit" data-dismiss="modal" class="btn btn-register btn-green" value="Cancel"></input>
+                &nbsp;&nbsp;<input  type="submit" class="btn btn-register btn-green" onfocusout="becomeFocus()" value="submit"></input>
+                </div>
+             </div>
+             </div>
+             <div class="modal-footer" >
+                 <center> <div id="bmyform"></div></center>
+             </div>
+             </form>
+           </div>
+           
+         </div>
+     </div>
+     <!-- WRAPPER Modal popup box close when click become an instructor-->
+     <!-- WRAPPER Modal popup box when click enroll now-->
+     <div class="modal fade bg-w-form contact-form" id="enroll_now" role="dialog">
+         <div class="modal-dialog">
+         
+           <!-- Modal content-->
+           <div class="modal-content">
+           <form  action="Enroll_now.php" method="POST" onsubmit="enroll_now();return false" >
+             <div class="modal-header"> 
+              <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">×</button>
+              <h3><center>REGISTER NOW!</center></h3>
+             </div>
+             <div class="row">
+                 <div class="modal-body col-md-10 col-md-offset-1" >
+                   <div class="modal-body col-md-6">
+                   <label for="regname" class="control-label form-label ">Name <span class="highlight">*</span></label><input name="name" id="ename" type="text" placeholder="" required class="form-control form-input" style="border:1px solid black; background-color:  lightgray;"  /><!--p.help-block Warning !-->
+                   </div>
+                   <div class="modal-body col-md-6">
+                   <label for="regemail" class="control-label form-label">Email-Id <span class="highlight">*</span></label><input name="email" id="eemail" type="email" placeholder="" class="form-control form-input" style="border:1px solid black; background-color:  lightgray;" required />
+                   </div>
+                   <div class="modal-body col-md-6">
+                   <label for="regpassword" class="control-label form-label">Mobile No. <span class="highlight">*</span></label><input name="mobile" id="emobile"  id="bmobile"type="number"  min="0" max="10000000000" placeholder="" class="form-control form-input" style="border:1px solid black; background-color:  lightgray;" required/>
+                   <!---label for="regpassword" class="control-label form-label">Area Of Expertise <span class="highlight">*</span></label><input id="Expertise" type="password" placeholder="" class="form-control form-input" style="border:1px solid black; background-color:  lightgray;" required/--->
+                    
+                    </div>
+                    
+                    
+                    
+                    <div class="modal-body col-md-6">
+                   <label for="course_applied_for " class="control-label form-label">Course Applied For  <span class="highlight">*</span></label><input name="course_applied_for" id="course_applied_for"  type="text"   placeholder="e.g MEAN/JAVA/PHP/......" class="form-control form-input" style="border:1px solid black; background-color:  lightgray;" required/>
+                   
+                    <input id="course_name" hidden type="text" value="BUSINESS ANALYST" >
+                    </div>
+ 
+                    
+                    <div class="modal-body col-md-6 col-md-offset-2">
+                   <input type="submit" data-dismiss="modal" class="btn btn-register btn-green" value="Cancel"/>
+                   &nbsp;&nbsp;<input  type="submit" class="btn btn-register btn-green" onfocusout="enrollFocus()" value="Submit"></input>
+                   </div>
+                </div>
+             </div>
+             <div class="modal-footer" >
+                 <center> <div id="emyform"></div></center>
+             </div>
+             </form>
+           </div>
+           
+         </div>
+     </div>
+    <!-- End  -->
+
+
+<!-- WRAPPER-->
+<div id="wrapper-content"><!-- PAGE WRAPPER-->
+    <div id="page-wrapper"><!-- MAIN CONTENT-->
+        <div class="main-content"><!-- CONTENT-->
+            <div class="content">
+                <div class="section background-opacity page-title set-height-top">
+                    <div class="container">
+                        <div class="page-title-wrapper"><!--.page-title-content--><h2 class="captions">Contact</h2>
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active"><a href="#">Contact</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section nav-subscribe">
+                    <div class="container">
+                        <div class="nav-subscribe-wrapper">
+                            <div class="nav-subscribe-left"><p class="subscribe-text">Subscribe <b class="focus">ThinkYard</b> to learn new creative skill</p></div>
+                            <div class="nav-subscribe-right">
+                                <button class="btn btn-green btn-bold"><span>SUBSCRIBE NOW</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section section-padding contact-main">
+                    <div class="container">
+                        <div class="contact-main-wrapper">
+                            <div class="row contact-method">
+                                <div class="col-md-4">
+                                    <div class="method-item"><i class="fa fa-map-marker"></i>
+
+                                        <p class="sub">COME TO</p>
+
+                                        <div class="detail"><p>A 64, Block A, First Floor, </p>
+                                            <p>Sector 4 - Noida,</p>
+
+                                            <p>U.P - 201301, India</p></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="method-item"><i class="fa fa-phone"></i>
+
+                                        <p class="sub">CALL TO</p>
+
+                                        <div class="detail"><p>0120-4325-907</p>
+
+                                            <!-- <p>Mobile: 1-800-123-hello</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="method-item"><i class="fa fa-envelope"></i>
+
+                                        <p class="sub">CONNECT TO</p>
+
+                                        <div class="detail"><p>info@thethinkyard.com</p>
+
+                                            <p>www.thethinkyard.com</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <form class="bg-w-form contact-form" action="contact-us.php" method="POST" onsubmit="contactUs();return false">
+								<!-- Added for PHP Code -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"><b>Full Name</b><span class="highlight">*</span><input  name="name" id="cName" required="required" type="text"  class="form-control form-input" /><!--label.control-label.form-label.warning-label(for="") Warning for the above !--></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"><b>Email Address</b><span class="highlight">*</span><input name="email"  id="cEmail" type="email" required="required" class="form-control form-input" /><!--label.control-label.form-label.warning-label(for="")--></div>
+                                    </div>
+									<div class="col-md-6">
+                                        <div class="form-group"><b>Mobile</b><span class="highlight">*</span><input name="mobile" type="number"  min="0" max="10000000000" id="cMobile"  required="required" type="text"  class="form-control form-input" /><!--label.control-label.form-label.warning-label(for="")--></div>
+                                    </div>
+                                    <!---div class="col-md-6">
+                                        <div class="form-group"><label class="control-label form-label">PURPOSE</label><select class="form-control form-input selectbox">
+                                            <option value="">Please Select</option>
+                                            <option value="">example 1</option>
+                                            <option value="">example 2</option>
+                                            <option value="">example 3</option>
+                                        </select>label.control-label.form-label.warning-label(for="", hidden)></div>
+                                    </div-->
+                                    <div class="col-md-6">
+                                        <div class="form-group"><b>Subject</b><span class="highlight">*</span><input type="text" id="cSubject" name="subject"  required="required" class="form-control form-input" /><!--label.control-label.form-label.warning-label(for="", hidden)--></div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="contact-question form-group"><b>How we can help?
+										</b><span class="highlight">*</span><textarea name="msg" id="cMessage" placeholder="Enter your message" required="required" class="form-control form-input" ></textarea></div>
+                                    </div>
+                                </div>
+                                <div class="contact-submit">
+                                    <button type="submit" name="submit" class="btn btn-contact btn-green" onfocusout="contactFocus()"> <?php echo @$_GET['msg']; ?><span>SUBMIT CONTACT</span></button>
+                                </div>
+								<center> <div id="cmyform"></div></center>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="map" class="section contact-map">
+                        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.562458048388!2d77.31941931440598!3d28.58289869307785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4575d275643%3A0xc0d70566a05978a6!2sDIGITAL+DESTINATION+INFOTECH!5e0!3m2!1sen!2sus!4v1550487885726" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BUTTON BACK TO TOP-->
+    <div id="back-top"><a href="#top"><i class="fa fa-angle-double-up"></i></a></div>
+</div>
+<!-- FOOTER-->
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top-wrapper">
+                <div class="footer-top-left"><p class="footer-top-focus">BECOME AN INSTRUCTOR</p>
+
+                    <p class="footer-top-text">Join thousand of instructors and earn money hassle free!</p></div>
+                <div class="footer-top-right">
+                    <button  class="btn btn-blue btn-bold" data-target="#become_an_instructor"  data-toggle="modal"><span>GET STARTED NOW</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-main-wrapper">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="col-md-3 col-sm-6 col-xs-6 sd380">
+                            <div class="edugate-widget widget">
+                                <div class="title-widget"> <span style="text-transform: none; font-size: 18px;">THINKYARD</span> </div>
+                                <div class="content-widget">
+                                    <p>ThinkYard, will give you a platform to Learn,grow and achieve the excellence by providing you a progressive learning programs, which will assure you a rewarding and exciting career.</p>
+
+                                    <!-- <div class="info-list">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fa fa-envelope-o"></i><a
+                                                    href="#">info@thethinkyard.com</a></li>
+                                            <li><i class="fa fa-phone"></i><a href="#">0120 4325 907</a></li>
+                                            <li><i class="fa fa-map-marker"></i><a href="#">
+                                                    <p>A-64, Sector 4 - Noida,</p>
+
+                                                    <p>U.P - 201301, India</p>
+                                                </a></li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 sd380">
+                            <div class="useful-link-widget widget">
+                                <div class="title-widget">QUICK LINKS</div>
+                                <div class="content-widget">
+                                    <div class="useful-link-list">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-angle-right"></i><a href="index.html">Home</a></li>
+                                                    <li><i class="fa fa-angle-right"></i><a href="courses.html">Courses</a>
+                                                    </li>
+                                                    <!-- <li><i class="fa fa-angle-right"></i><a href="#">Placement</a> -->
+                                                    </li>
+                                                    <li><i class="fa fa-angle-right"></i><a href="#">Faq</a></li>
+                                                    
+
+                                                    <!-- <li><i class="fa fa-angle-right"></i><a href="#">Site Map</a></li> -->
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                    <ul class="list-unstyled">
+                                                            <li><i class="fa fa-angle-right"></i><a href="contact.html">Contact Us</a></li>
+                                                            <!-- <li><i class="fa fa-angle-right"></i><a href="#">Latest Courses</a></li> -->
+                                                            <!-- <li><i class="fa fa-angle-right"></i><a href="#">Partners</a></li> -->
+                                                            <li><i class="fa fa-angle-right"></i><a href="#">News</a></li>
+                                                            <li><i class="fa fa-angle-right"></i><a href="privacy-policies.html">Privacy Policies</a></li>
+                                                            <!-- <li><i class="fa fa-angle-right"></i><a href="#">Faq</a></li> -->
+                                                            <!-- <li><i class="fa fa-angle-right"></i><a href="#">Term &
+                                                                    Consition</a></li> -->
+                                                        </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="col-md-3 col-sm-6 col-xs-6 sd380">
+                            <div class="gallery-widget widget">
+                                <div class="title-widget">GET IN TOUCH</div>
+                                <div class="content-widget">
+                                    <!-- <div class="gallery-list"><a href="#" class="thumb"> -->
+                                    <div class="useful-link-list">
+
+
+                                        <!-- <img src="assets/images/gallery/gallery-01.jpg" alt="" class="img-responsive"/></a>
+                                    <a href="#" class="thumb"><img src="assets/images/gallery/gallery-02.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-03.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-04.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-05.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-06.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-07.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-08.jpg"
+                                         
+        
+                                        alt="" class="img-responsive"/></a>-->
+                                        
+
+                                        <div class="info-list">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-envelope-o"></i><a
+                                                            href="#">info@thethinkyard.com</a></li>
+                                                    <li><i class="fa fa-phone"></i><a href="#">0120 4325 907</a></li>
+                                                    <li><i class="fa fa-map-marker"></i><a href="#">
+                                                            <p>A 64, Block A, First Floor, </p>
+                                                            <p>Sector 4 - Noida,</p>
+    
+                                                            <p>U.P - 201301, India</p>
+                                                        </a></li>
+                                                </ul>
+                                            </div>
+
+                                    </div>
+
+
+
+
+                                    <div class="clearfix"></div>
+                                    <!-- <a href="#" class="view-more">View more&nbsp;<i class="fa fa-angle-double-right mls"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 sd380">
+                            <div class="mailing-widget widget">
+                                <div class="title-widget">FOLLOW US</div>
+                                <div class="content-wiget">
+                                    <!-- <p>Become a <a href="#"> Mentor</a></p> -->
+
+                                    <!-- <form action="index.html">
+                                        <div class="input-group"><input type="text" placeholder="Email address"
+                                                class="form-control form-email-widget" /><span
+                                                class="input-group-btn"><input type="submit" value="✓"
+                                                    class="btn btn-email" /></span></div>
+                                    </form>
+                                    <p>We respect your privacy</p> -->
+
+                                    <div class="socials"><a href="https://www.facebook.com/ThinkYard-Pvt-Ltd-567033887147374/?modal=admin_todo_tour" target="_blank" class="facebook"><i class="fa fa-facebook">
+                                            </i></a><a href="https://www.linkedin.com/in/thinkyard-thinkyard-a9b512180/" target="_blank" class="google"><i class="fa fa-linkedin"></i></a>
+                                        <a href="https://twitter.com/YardThink" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                                        <!-- <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a> -->
+                                        <!-- <a href="#" class="blog"><i class="fa fa-rss"></i></a> -->
+                                        <!-- <a href="#" class="dribbble"><i class="fa fa-dribbble"></i></a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hyperlink">
+                <div class="pull-left hyper-left">
+                    <ul class="list-inline">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="courses.html">COURSES</a></li>
+                        <li><a href="index.html">INTERNSHIP</a></li>
+                        <li><a href="index.html">RESOURCE</a></li>
+                        <!-- <li><a href="news.html">PLACEMENT</a></li> -->
+                        <li><a href="index.html#campustraining">SERVICE</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+
+                    </ul>
+                </div>
+                <div class="pull-right hyper-right">@ ThinkYard 2019</div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- THEME SETTING-->
+<!-- <div class="theme-setting">
+    <div class="theme-loading">
+        <div class="theme-loading-content">
+            <div class="dots-loader"></div>
+        </div>
+    </div>
+    <a href="javascript:;" class="btn-theme-setting"><i class="fa fa-tint"></i></a>
+
+    <div class="content-theme-setting"><h2 class="title">setting color</h2>
+        <ul class="list-unstyled list-inline color-skins">
+            <li data-color="color-1"></li>
+            <li data-color="color-2"></li>
+            <li data-color="color-3"></li>
+            <li data-color="color-4"></li>
+            <li data-color="color-5"></li>
+            <li data-color="color-6"></li>
+            <li data-color="color-7"></li>
+            <li data-color="color-8"></li>
+            <li data-color="color-9"></li>
+            <li data-color="color-10"></li>
+        </ul>
+    </div>
+</div> -->
+<!-- LOADING--><!-- JAVASCRIPT LIBS--><!--script.--><!--    if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1')) {--><!--        $('.logo .header-logo img').attr('src', 'assets/images/logo-' + Cookies.get('color-skin') + '.png');--><!--    } else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1')) {--><!--        $('.logo .header-logo img').attr('src', 'assets/images/logo-color-1.png');--><!--    }-->
+<script src="assets/libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="assets/libs/smooth-scroll/jquery-smoothscroll.js"></script>
+<script src="assets/libs/owl-carousel-2.0/owl.carousel.min.js"></script>
+<script src="assets/libs/appear/jquery.appear.js"></script>
+<script src="assets/libs/count-to/jquery.countTo.js"></script>
+<script src="assets/libs/wow-js/wow.min.js"></script>
+<script src="assets/libs/selectbox/js/jquery.selectbox-0.2.min.js"></script>
+<script src="assets/libs/fancybox/js/jquery.fancybox.js"></script>
+<script src="assets/libs/fancybox/js/jquery.fancybox-buttons.js"></script>
+<!-- MAIN JS-->
+<script src="assets/js/main.js"></script>
+<!-- LOADING SCRIPTS FOR PAGE-->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu6tm60TzeUo9rWpLnrQ7mrFn4JPMVje4&amp;amp;sensor=false"></script> -->
+
+
+<script src="assets/js/pages/contact.js"></script>
+</body>
+</html>
