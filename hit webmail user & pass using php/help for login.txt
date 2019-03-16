@@ -1,0 +1,1 @@
+https://afterlogic.com/docs/webmail-lite/integration-and-development/logging-in-programmatically
