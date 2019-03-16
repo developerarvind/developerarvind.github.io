@@ -29,7 +29,7 @@
 				$oApiIntegratorManager->setAccountAsLoggedIn($oAccount);
 
 				// redirecting to WebMail
-				CApi::Location('../');
+				CApi::Location('../http://webmail.kriritindia.in:2095/logout/?locale=en');
 			}
 			else
 			{
