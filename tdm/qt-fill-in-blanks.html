@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!-- bs modal from w3s -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- font for timer -->
+    <link rel="stylesheet" href="assets/fonts/Pixel-LCD-7.ttf">
+    <!-- fa fa icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qt-fill-in-blanks.htmlfont-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- fontawesome icon -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+</head>
+
+<body>
+    <!-- End of modal for instruction -->
+    <div class="container">
+        <!-- <h2>Modal Example</h2> -->
+        <!-- Trigger the modal with a button -->
+        <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog" style=" ">
+            <div class="modal-dialog" style="">
+
+                <!-- Modal content-->
+                <!-- <div class="modal-content" style="width: 920px; height:auto;  " > -->
+                <div class="modal-content" style="width: 920px; height:auto; margin-left: -200px  ">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!-- <h4 class="modal-title">Modal Header</h4> -->
+                    </div>
+
+                    <div class="modal-body" style="">
+
+                        <!-- <p>Some text in the modal.</p> -->
+                        <div class="" style="">
+
+                            <!-- machine instruction start-->
+                            <div class="container-fluid inner-top-bar">
+                                <p style="font-weight: 600; line-height:35px; font-size: 20px; color: #687987">
+                                    Instruction</p>
+                            </div>
+
+                            <div class="container-fluid rignt-container-content scroll-container"
+                                style="color: #687987">
+                                <div class="align-right" style="margin: 1% 1% 3% 0%">
+                                    <span style="font-size: 14px; font-weight:500"> View in </span>
+                                    <select name="" id="" style="border-radius: 10%; color:#687987; ">
+                                        <option value="english" selected>English</option>
+                                        <option value="hindi">Hindi</option>
+                                    </select>
+                                </div>
+
+                                <p class="align-center" style="font-size: 18px; color: #687987; font-weight: bold">Please
+                                    read the
+                                    istruction carefully</p>
+                                <h6 class="align-left "><u>General Instruction:</u></h6>
+                                <div class="inner-content" style="color: #687987; font-weight: 500;">
+                                    <ol start="1">
+                                        <li>Total duration of examination is 100 minutes.</li>
+                                        <li>The clock will be set at the server. The countdown timer in the top right
+                                            corner of
+                                            screen will display the remaining time available for you to complete the
+                                            examination. When the timer reaches zero, the examination will end by
+                                            itself. You will
+                                            not be required to end or submit your exam.</li>
+                                        <li> The Question palette display on the right side of screen will show the
+                                            status of each
+                                            question using one of the following symbols
+                                            You have not visited the question yet.
+                                            <ol style=" list-style-type:none;">
+                                                <li>You have not visited the question yet</li>
+                                                <li>You have not answered the question</li>
+                                                <li>You have answered the question</li>
+                                                <li>You have NOT answered the question, but have marked the question for
+                                                    review</li>
+                                            </ol>
+                                        </li>
+                                        <!-- <li></li> -->
+                                    </ol>
+                                </div>
+                                <!-- <button class="btn btn-primary float-right" type="button" onclick="window.location.href='q-instruction.html'"><span>Next </span></button> -->
+                            </div>
+
+                            <!-- q-instruction start -->
+                            <div class="container-fluid inner-top-bar">
+                                <p style="font-weight: 600; line-height:35px; font-size: 20px; color: #687987">Other
+                                    Important Instruction</p>
+                            </div>
+
+                            <div class="container-fluid rignt-container-content scroll-container"
+                                style="color: #687987">
+                                <div class="align-right" style="margin: 1% 1% 3% 0%">
+                                    <span style="font-size: 14px; font-weight:500"> View in </span>
+                                    <select name="" id="" style="border-radius: 10%; color:#687987; ">
+                                        <option value="english" selected>English</option>
+                                        <option value="hindi">Hindi</option>
+                                    </select>
+                                </div>
+
+                                <p class="align-center" style="font-size: 18px; color: #687987; font-weight: 500">Please
+                                    read the
+                                    istruction carefully</p>
+                                <h6 class="align-left "><u>General Instruction:</u></h6>
+                                <div class="" style="color: #687987; font-weight: 500;">
+                                    <ol start="1">
+                                        <li>Total duration of examination is 100 minutes.</li>
+                                        <li>The clock will be set at the server. The countdown timer in the top right
+                                            corner of
+                                            screen will display the remaining time available for you to complete the
+                                            examination. When the timer reaches zero, the examination will end by
+                                            itself. You will
+                                            not be required to end or submit your exam.</li>
+                                        <li> The Question palette display on the right side of screen will show the
+                                            status of each
+                                            question using one of the following <br> symbols
+                                            You have not visited the question yet.
+                                            <ol style=" list-style-type:none;">
+                                                <li>You have not visited the question yet</li>
+                                                <li>You have not answered the question</li>
+                                                <li>You have answered the question</li>
+                                                <li>You have NOT answered the question, but have marked the question for
+                                                    review</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!-- <button class="btn btn-secondary ml-2" type="button" onclick="window.location.href='m-instruction.html'"><span>Previous </span></button> -->
+
+                                <!-- <button class="btn btn-primary float-right mr-3" type="button" onclick="window.location.href='qt-mcq.html'" ><span>Next </span></button> -->
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- End of modal for instruction -->
+    <div class="main-container">
+        <div class="container-fluid top-bar-qt">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p style="font-weight: 600; line-height:30px; font-size: 18px; color: white ;">KriRit Test
+                        Assesment</p>
+                </div>
+                <div class="col-lg-6">
+                    <div style="float:right">
+                    <img src="assets/icons/icons8-calculator-96.png" alt="calculater-icon" width="25px" height="30px">
+                    <img src="assets/icons/icons8-length-48.png" alt="" width="30px" height="30px">
+                    <img src="assets/icons/icons8-measurement-tool-48.png" alt="" width="25px" height="30px">
+                    <img src="assets/icons/icons8-notepad-100.png" alt="" width="25px" height="30px">
+                    <img src="assets/icons/icons8-marker-pen-96.png" alt="text-highlighter" width="25px" height="30px">
+                    <img src="assets/icons/icons8-zoom-in-100.png" alt="" width="25px" height="30px">
+                    <img src="assets/icons/icons8-zoom-out-100.png" alt="" width="25px" height="30px">
+                    <img src="assets/icons/icons8-wacom-tablet-100.png" alt="scratch-pad" width="25px" height="30px">
+                </div>
+                </div>
+                <div class="col-lg-3 " style="padding: 0% 0% 0% 0%;">
+                    <div style="">
+                    <p class="mr-3"
+                        style="font-weight: 600; line-height:30px; font-size: 9px;  float: left; color: white ">
+                        <i class="fa fa-book" aria-hidden="true" style='font-size:10px;'></i>
+                        Question Paper</p>
+                    <p class="mr-3" data-toggle="modal" data-target="#myModal"
+                        style="font-weight: 600; line-height:30px; font-size: 9px;   float: left; color: white; cursor: pointer;  ">
+                        <i class='fas fa-book-reader' style='font-size:10px;color:salmon'></i>
+
+                        Instruction</p>
+                    <p class="mr-3"
+                        style="font-weight: 600; line-height:30px; font-size: 9px;   float: left; color: white">
+                        <i class='fas fa-book-open' style='font-size:10px;color:springgreen'></i>
+
+                        Useful Data</p>
+                    <p style="font-weight: 600; line-height:30px; font-size: 9px;  float: left ; color: white">
+                            <i class='fas fa-book-reader' style='font-size: 10px; color:orange; '></i>
+                        Group Instruction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-right: 0px; border-bottom: 1px solid gainsboro">
+            <div class="col-lg-2">
+                <div style="margin-top:5%; margin-bottom:3%; ">
+                    <img src="assets/images/student.png" alt="profile image"
+                        style="max-width: 80px; max-height:80px; display: block; border-radius: 25%; float:left">
+                </div>
+                <h4 for="" style="text-align: right; color: #98adc5; float:left ; margin-left:5%;">Student</h4>
+            </div>
+            <div class="col-lg-10 right-container" style="padding-left:0%; padding-right:0%">
+
+                <div class="row"
+                    style="height: 50px; width: 100%;   margin-left: 0px; border-bottom: 1px solid gainsboro;">
+                    <div class="col-lg-8">
+                        <button class="btn btn-outline-info btn-sm mr-1 active" style="margin-top: 1% ; ">General
+                            Knowledge
+                            <img src="assets/icons/information.png" alt="information" width="15px" height="15px;">
+                        </button>
+                        <button class="btn btn-outline-info btn-sm  mr-1" style="margin-top: 1% ;">Psychometric
+                            Question
+                            <img src="assets/icons/information.png" alt="information" width="15px" height="15px;">
+                        </button>
+                        <button class=" btn btn-outline-info btn-sm mr-1" style="margin-top: 1% ; ">Psychometric
+                            Test
+                            <img src="assets/icons/information.png" alt="information" width="15px" height="15px;">
+                        </button>
+                        <button class=" btn btn-outline-info btn-sm " style="margin-top: 1% ; ">Typing Test
+                                <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
+                                <img src="assets/icons/information.png" alt="information" width="15px" height="15px;">
+
+                        </button>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="timer-box" style="">
+                            <p style="float: right; line-height: 50px;  font-family: timerFont; ">Time Left <span style="color: limegreen;font-weight: bold">90</span>:<span style="color: red;font-weight: bold">24</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section row hide -->
+                <!-- <div class="row"
+                    style="height: 50px; width: 100%;   margin-left: 0px;  border-bottom: 1px solid #687987">
+                    <div class="col-lg-2">
+                        <p style="line-height: 50px;"> Section </p>
+                    </div>
+                    <div class="col-lg-10"></div>
+                    <div class="clo-lg-2">
+                        <p style="line-height: 50px; font-weight: bold; float:right;"></p>
+                    </div>
+                </div> -->
+
+<!-- right third section -->
+                <div class="row"
+                    style="height: 50px; width: 100%;  margin-left: 0px;  border-bottom: 1px solid gainsboro">
+                    <div class="col-lg-12" style="">
+                        <button class="btn btn-outline-primary btn-sm active"
+                            style="width: 80px; margin-top: 10px ">Section1
+                            <img class="tooltip" src="assets/icons/information.png" alt="information" width="15px" height="15px;">
+                                                   </button>
+                                                   <!-- <span class="tooltiptext">Tooltip text bajbxijabicijnsiocnio
+                                                    </span>  -->
+                        <button class="btn btn-outline-primary btn-sm "
+                            style="width: 80px;margin-top: 10px  ">Section2
+                            <img src="assets/icons/information.png" alt="information" width="15px" height="15px;">
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm " style="width: 80px;margin-top: 10px"
+                            onclick="window.location.href='qt-fill-in-blanks.html'">Section3
+                            <img src="assets/icons/information.png" alt="information" width="15px" height="15px;">
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm "
+                            style="width: 80px;margin-top: 10px  ">Section4
+                        
+                            <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
+                            <img src="assets/icons/information.png" alt="information" width="15px" height="15px;">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- question section -->
+        <div class="row" style="margin-right: 0%; ">
+            <!--left button pannel  -->
+            <div class="col-lg-2" style="border: 2px solid #687987; padding: 0%">
+                <!-- pannel symbol section -->
+                <div class="row" style="width: 100%; height: 150px; margin: 0px">
+                    <div class="col-lg-12">
+                        <table class="table " style="font-size: 12px; ">
+                            <tr style=" ">
+                                <td class="border-0" style=" padding: 5% 0% 0% 0%; width: 16.66%;">
+                                    <!-- for ploygon button -->
+                                    <svg height="35" width="35">
+
+                                            <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                                                    <stop offset="0%" stop-color="lime"/>
+                                                    <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                                    <stop offset="100%" stop-color="forestgreen"/>
+                                                  </linearGradient>
+
+                                        <polygon points="10,0 26,0 35,15   35,35 0,35 0,15" 
+                                            style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;"/>
+                                        <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                            alignment-baseline="middle">
+                                            3
+                                        </text>
+                                    </svg>
+
+                                </td>
+                                <!-- <td class="border-0" style=" padding: 5% 0% 0% 0%;width: 16.66%; font-size: 11px; ">Answered</td> -->
+                                <td class="border-0" style="padding: 5% 2% 0% 2%;width: 16.66%;"><p style="  font-size: 12px; margin-top: 12px; margin-bottom: 0px; padding-bottom: 0px ">  Answered </p></td>
+
+
+                                <td class="border-0" style="padding: 5% 0% 0% 0%; width: 16.66% ">
+                                    <!-- for reverse ploygon button -->
+                                    <svg height="35" width="35">
+
+                                            <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                                                    <stop offset="0%" stop-color="lightcoral"/>
+                                                    <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                                    <stop offset="100%" stop-color="red"/>
+                                                  </linearGradient>
+
+                                        <polygon points="0,0 35,0 35,20    26,35 10,35 0,20"
+                                            style="fill:url(#Gradient2); stroke:#938c91;stroke-width:1;" />
+                                        <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                            alignment-baseline="middle">
+                                            2
+                                        </text>
+                                    </svg>
+                                </td>
+                                <!-- <td class="border-0" style="padding: 5% 0% 0% 2%;width: 16.66% "> Not Answered</td> -->
+                                <td class="border-0" style="padding: 5% 2% 0% 2%;width: 16.66%;"><p style="  font-size: 12px; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px">  Not Answered </p></td>
+
+                            </tr>
+
+                            <tr style=" ">
+                                <td class="border-0" style=" padding: 5% 0% 0% 0%; width: 16.66%  ">
+                                    <!-- for circle button -->
+                                    <svg width="35" height="35">
+
+                                            <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                                    <stop offset="0%" stop-color="white"/>
+                                                    <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                                    <stop offset="100%" stop-color="lightgray"/>
+                                                  </linearGradient>
+
+                                        <a href="#">
+                                            <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91"
+                                                stroke-width="1" />
+
+                                            <text x="18" y="18" fill="#000" text-anchor="middle"
+                                                alignment-baseline="middle">
+                                                1
+                                            </text>
+                                        </a>
+                                    </svg>
+
+                                </td>
+                                <!-- <td class="border-0" style="padding: 5% 1% 0% 2%;width: 16.66% ;">  Not Visited</td> -->
+                                <td class="border-0" style="padding: 5% 2% 0% 2%; width: 16.66% "><p style="font-size: 12px; margin-bottom: 0px; padding-bottom: 0px">  Not Visited </p></td>
+
+                                <td class="border-0" style=" padding: 5% 0% 0% 0%; width: 16.66%  ">
+                                    <!-- for square button -->
+                                    <svg width="35" height="35">
+
+                                            <linearGradient id="Gradient4" x1="0" x2="0" y1="0" y2="1">
+                                                    <stop offset="0%" stop-color="fuchsia"/>
+                                                    <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                                    <stop offset="100%" stop-color="mediumarchid"/>
+                                                  </linearGradient>
+
+                                        <rect width="35" height="35" rx="10px"
+                                            style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1; border-radius: 20px;" />
+                                        <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                            alignment-baseline="middle">
+                                            3
+                                        </text>
+
+                                    </svg>
+                                </td>
+                                <!-- <td class="border-0" style=" padding: 5% 0% 0% 0%;width: 16.66% "> Marked for Review -->
+                                        <td class="border-0" style="padding: 5% 0% 0% 2%; width: 16.66% "><p style="font-size: 12px;margin-bottom: 0px; padding-bottom: 0px ">  Marked for Review </p></td>
+
+                                </td>
+
+
+                            </tr>
+<!-- fifth icon in svg -->
+                            <!-- <tr>
+                                    <td class="border-0" style=" padding: 5% 0% 0% 0%;width: 32%  ">
+                                            for square button
+                                            <svg width="35" height="35">
+                                                <rect width="35" height="35" rx="10px"
+                                                    style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1;" />
+                                                <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                                    alignment-baseline="middle">
+                                                    3
+                                                </text>
+        
+                                            </svg>
+                                        </td>
+                                <td class="border-0" style=" margin: 0%;padding: 0%; width: 32%;"> Answered & Marked for Review (will be considered for evaluation)</td>
+                            </tr> -->
+<tr>
+        <td class="border-0" style=" padding: 5% 0% 0% 0%;width: 16.66%  ">
+                <!-- for square button -->
+                <svg width="35" height="35">
+                    <rect width="35" height="35" rx="10px"
+                        style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1;" />
+                    <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                        alignment-baseline="middle">
+                        3
+                    </text>
+
+                    <!--  -->
+                        <a href="#">
+                            <circle cx="28" cy="28" r="7" fill="url(#Gradient1)" stroke="#938c91"
+                                stroke-width="1" />
+                        </a>
+                    <!--  -->
+                </svg>
+            </td>
+            <td class="border-0 " colspan="3" style="padding: 5% 0% 0% 2%; width: 16.66%;"><p style="font-size: 12px;margin-bottom: 0px; padding-bottom: 0px ">  Answered & Marked for Review (will be considered for evaluation) </p></td>
+
+</tr>
+                        </table>
+                    </div>
+                </div>
+
+
+<!-- middle section -->
+                <div class="row" style="width: 100%; height: 20px; background-color: #2c70b6;  margin: 0%">
+                    <p style=" font-size: 12px; font-weight:500; color: white; line-height: 20px;"> Section 1</p>
+                </div>
+
+
+<!--  pannel end section -->
+                <div class="row" style="width: 100%; height: 270px;  margin: 0%; background-color: #e5f5fc">
+                    <!-- buttons -->
+                    <div class="col-lg-12">
+                        <table class="table">
+                            <thead>
+                                <tr>choose a Question
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border-0" style="padding: 3% 0% 0% 0%;">
+                                        <!-- for ploygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="10,0 26,0 35,15   35,35 0,35 0,15"
+                                                style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                                alignment-baseline="middle">
+                                                1
+                                            </text>
+                                        </svg>
+                                    </td>
+                                    <td class="border-0" style="padding: 3% 0% 0% 0%;">
+                                        <!-- for ploygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="10,0 26,0 35,15   35,35 0,35 0,15"
+                                                style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                                alignment-baseline="middle">
+                                                2
+                                            </text>
+                                        </svg>
+
+                                    </td>
+                                    <td class="border-0" style="padding: 3% 0% 0% 0%;">
+                                        <svg height="35" width="35">
+                                            <polygon points="0,0 35,0 35,20    26,35 10,35 0,20"
+                                                style="fill:url(#Gradient2); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                                alignment-baseline="middle">
+                                                3
+                                            </text>
+                                        </svg>
+
+                                    </td>
+                                    <td class="border-0" style=" padding: 3% 0% 0% 0%;">
+                                        <!-- for ploygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="10,0 26,0 35,15   35,35 0,35 0,15"
+                                                style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                                alignment-baseline="middle">
+                                                4
+                                            </text>
+                                        </svg>
+                                    </td>
+                                    <td class="border-0" style=" padding: 3% 0% 0% 0%;">
+                                        <!-- for reverse ploygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="0,0 35,0 35,20    26,35 10,35 0,20"
+                                                style="fill: url(#Gradient2); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                                alignment-baseline="middle">
+                                                5
+                                            </text>
+                                        </svg>
+                                    </td>
+
+
+                                </tr>
+                                <tr style="">
+                                    <td class="border-0" style="padding: 3% 0% 0% 0%">
+                                        <!-- for squire button -->
+                                        <svg width="35" height="35">
+
+                                                <linearGradient id="Gradient4" x1="0" x2="0" y1="0" y2="1">
+                                                        <stop offset="0%" stop-color="fuchsia"/>
+                                                        <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                                        <stop offset="100%" stop-color="mediumarchid"/>
+                                                      </linearGradient>
+    
+                                            <rect width="35" height="35" rx="10px"
+                                                style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1; border-radius: 20px;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle"
+                                                alignment-baseline="middle">
+                                                3
+                                            </text>
+    
+                                        </svg>
+                                    </td>
+                                    <td class="border-0" style="padding: 3% 0% 0% 0%">
+                                        <!-- for circle button -->
+                                        <svg width="35" height="35">
+
+                                                <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                                        <stop offset="0%" stop-color="white"/>
+                                                        <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                                        <stop offset="100%" stop-color="lightgray"/>
+                                                      </linearGradient>
+    
+                                            <a href="#">
+                                                <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91"
+                                                    stroke-width="1" />
+    
+                                                <text x="18" y="18" fill="#000" text-anchor="middle"
+                                                    alignment-baseline="middle">
+                                                    1
+                                                </text>
+                                            </a>
+                                        </svg>
+                                    </td>
+                                    <td class="border-0" style="padding: 3% 0% 0% 0%">
+                                        <!-- for circle button -->
+                                        <svg width="35" height="35">
+
+                                                <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                                        <stop offset="0%" stop-color="white"/>
+                                                        <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                                        <stop offset="100%" stop-color="lightgray"/>
+                                                      </linearGradient>
+    
+                                            <a href="#">
+                                                <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91"
+                                                    stroke-width="1" />
+    
+                                                <text x="18" y="18" fill="#000" text-anchor="middle"
+                                                    alignment-baseline="middle">
+                                                    1
+                                                </text>
+                                            </a>
+                                        </svg>
+                                    </td>
+                                    <td class="border-0" style="padding: 3% 0% 0% 0%">
+                                        <!-- for circle button -->
+                                        <svg width="35" height="35">
+
+                                                <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                                        <stop offset="0%" stop-color="white"/>
+                                                        <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                                        <stop offset="100%" stop-color="lightgray"/>
+                                                      </linearGradient>
+    
+                                            <a href="#">
+                                                <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91"
+                                                    stroke-width="1" />
+    
+                                                <text x="18" y="18" fill="#000" text-anchor="middle"
+                                                    alignment-baseline="middle">
+                                                    1
+                                                </text>
+                                            </a>
+                                        </svg>
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-10" style="padding-left: 0%; padding-right: 0%;border-left: 1px solid #687987">
+                <div class="row" style="height: 20px; width: 100%; margin-left: 0px; border-bottom: 1px solid #687987; font-size: 12px">
+                    <div class="col-lg-4"> Question Type :Multiple Choice Question </div>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4"><div style="margin-left: 85px; "> Marks for correct answer 1 | Negative Marks <span style="color: red"> 0.5
+                        </span></div></div>
+                </div>
+                <div class="row"
+                    style="height: 35px; width: 100%;  background-color: #2c70b6; margin-left: 0px; border-bottom: 1px solid #687987">
+                    <div class="col-lg-12">
+                        <div class="align-right" style="margin-top: 5px">
+                            <span style="font-size: 14px; font-weight:500; color: white"> View in </span>
+                            <select name="" id="" style="border-radius: 10%; ">
+                                <option value="english" selected>English</option>
+                                <option value="hindi">Hindi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid"
+                    style="height: 385px; width: 100%;    border: 1px solid gainsboro ; margin-top: 3px; border-top: none;border-left: none;">
+                    <!-- <div class="row" style="">
+                        <div class="col-lg-12">
+                            <p style="font-weight:600;">Question No. 4</p>
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-lg-12">
+
+
+                                <div class="mt-3">
+
+                                        The President of india is
+                                        <input type="text" >
+                                        
+                                        </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- end -->
+        <!--bottom button section -->
+        <div class="row" style="margin-right: 0%;">
+            <div class="col-lg-2">
+                <button class="btn btn-primary" type="button" onclick="window.location.href='qt-mcq.html'"
+                    style="display: block; margin:auto;margin-top: 9px;"><span>Submit </span></button>
+            </div>
+            <div class="col-lg-10" style=" width: 100%; height: 50px; margin-top: 5px;">
+                <button class="btn btn-primary float-left mr-3" type="button"
+                    onclick="window.location.href='qt-mcq.html'" style="margin-top: 5px"><span>Mark For Review & Next
+                    </span></button>
+                <button class="btn  btn-primary float-left " type="button"
+                    onclick="window.location.href='qt-mcq.html'" style="margin-top: 5px"><span> Clear Response
+                    </span></button>
+                <button class="btn btn-primary float-right" type="button" onclick="window.location.href='qt-mcq.html'"
+                    style="margin-top: 5px"><span>Save & Next </span></button>
+
+            </div>
+        </div>
+
+        <!-- footer section -->
+        <div class="container-fluid">
+
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <!-- <script> -->
+    <!-- // instruction modal
+// $(function() {
+
+// $('[data-toggle="modal"]').hover(function() {
+//   var basicExampleModal = $(this).data('target');
+//   $(basicExampleModal).modal('show');
+
+// });
+
+// }); -->
+    <!-- </script> -->
+</body>
+
+</html>

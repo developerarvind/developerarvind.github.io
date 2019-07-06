@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QP-MCQ</title>
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!-- bs modal from w3s -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- font for timer -->
+    <link rel="stylesheet" href="assets/fonts/Pixel-LCD-7.ttf">
+    <!-- fa fa icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- fontawesome icon -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<!-- external style sheet -->
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- top bar section -->
+        <div class="container-fluid top-bar">
+            <div class="row">
+
+                <!-- logo -->
+                <div class="col-lg-3">
+                    <p class="logo" >KriRit Test Assesment</p>
+                </div>
+
+                <!-- stationery items -->
+                <div class="col-lg-6">
+                    <div class="pull-right stationery-items">
+                        <img src="assets/icons/icons8-calculator-96.png" alt="calculater-icon">
+                        <img src="assets/icons/icons8-length-48.png" alt="" >
+                        <img src="assets/icons/icons8-measurement-tool-48.png" alt="" >
+                        <img src="assets/icons/icons8-notepad-100.png" alt="" >
+                        <img src="assets/icons/icons8-marker-pen-96.png" alt="text-highlighter" >
+                        <img src="assets/icons/icons8-zoom-in-100.png" alt="" >
+                        <img src="assets/icons/icons8-zoom-out-100.png" alt="" >
+                        <img src="assets/icons/icons8-wacom-tablet-100.png" alt="scratch-pad" >
+                    </div>
+                </div>
+
+                <!-- top right side instruction -->
+                <div class="col-lg-3 p-0">
+                    <div class="top-right-instruction">
+                        <p class="mr-3" data-toggle="modal" data-target="#myModalQuestionPaper">
+                            <i class="fa fa-book" aria-hidden="true" style='font-size:10px;'></i> Question Paper</p>
+
+                        <p class="mr-3" data-toggle="modal" data-target="#myModalInstruction">
+                            <i class='fas fa-book-reader' style='font-size:10px;color:salmon'></i> Instruction</p>
+
+                        <p class="mr-3" data-toggle="modal" data-target="#myModalUsefullData">
+                            <i class='fas fa-book-open' style='font-size:10px;color:springgreen'></i> Useful Data</p>
+
+                        <p data-toggle="modal" data-target="#myModalGroupInstruction">
+                            <i class='fas fa-book-reader' style='font-size: 10px; color:orange; '></i> Group Instruction</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    <!--End top bar section -->
+
+
+<!-- header section -->
+        <div class="row">
+
+            <!-- profile section -->
+            <div class="col-lg-2">
+                <div class="profile">
+                    <img src="assets/images/student.png" alt="profile image">
+                </div>
+                <h4 class="profile-text">Student</h4>
+            </div>
+
+            <div class="col-lg-10 pl-0 pr-0 header-right-container">
+
+                <!-- header right first row -->
+                <div class="row header-right-first">
+                    
+                    <!-- Group section -->
+                    <!-- "group-info" class call for a small container which shows details of question done in a group -->
+                    <div class="col-lg-8">
+                        <button class="btn btn-outline-info btn-sm mr-1 mt-3 active">General Knowledge
+                            <img class="group-info" src="assets/icons/information.png" alt="information" >
+                        </button>
+                        <button class="btn btn-outline-info btn-sm  mr-1 mt-3">Psychometric Question
+                            <img class="group-info" src="assets/icons/information.png" alt="information" >
+                        </button>
+                        <button class="btn btn-outline-info btn-sm mr-1 mt-3">Psychometric Test
+                            <img class="group-info" src="assets/icons/information.png" alt="information" >
+                        </button>
+                        <button class="btn btn-outline-info btn-sm mt-3">Typing Test
+                            <img class="group-info" src="assets/icons/information.png" alt="information">
+                        </button>
+                    </div>
+
+                    <!-- timer -->
+                    <div class="col-lg-4">
+                        <div class="timer-box">
+                            <p>Time Left <span class="timer-min-color">90</span>:<span class="timer-sec-color">24</span> </p>
+                        </div>
+                    </div>
+
+                </div>
+               
+                <!-- header right second row -->
+                <div class="row header-right-second">
+
+                    <!-- Section section -->
+                    <!-- "section-info" class call for a small container which shows details of question done in a Section -->
+                    <div class="col-lg-12">
+                        <button class="btn btn-outline-primary btn-sm active">Section1
+                            <img class="section-info" src="assets/icons/information.png" alt="information">
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm">Section2
+                            <img class="section-info" src="assets/icons/information.png" alt="information">
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm" onclick="window.location.href='qt-fill-in-blanks.html'">Section3
+                            <img class="section-info" src="assets/icons/information.png" alt="information">
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm">Section4
+                            <img class="section-info" src="assets/icons/information.png" alt="information">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+<!-- End of header section -->
+
+
+<!-- body section -->
+        <div class="row">
+
+            <!--button panel section -->
+            <div class="col-lg-2 p-0 btn-panel-sec">
+
+                <!--button pannel symbol section -->
+                <div class="row btn-panel-symb-sec">
+                    <div class="col-lg-12">
+                        <table class="table">
+                            <tr>
+                                <td class="border-0 btn-panel-f-r-symb">
+                                    <!-- for ploygon button -->
+                                    <svg height="35" width="35">
+                                        <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="lime" />
+                                            <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                            <stop offset="100%" stop-color="forestgreen" />
+                                        </linearGradient>
+
+                                        <polygon points="10,0 26,0 35,15  35,35 0,35 0,15" style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;" />
+                                        <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3 </text>
+                                    </svg>
+                                </td>
+                                <td class="border-0 btn-panel-f-r-symb-text"> <p> Answered </p> </td>
+
+                                <td class="border-0 btn-panel-f-r-symb">
+                                    <!-- for reverse ploygon button -->
+                                    <svg height="35" width="35">
+                                        <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="lightcoral" />
+                                            <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                            <stop offset="100%" stop-color="red" />
+                                        </linearGradient>
+
+                                        <polygon points="0,0 35,0 35,20   26,35 10,35 0,20" style="fill:url(#Gradient2); stroke:#938c91;stroke-width:1;" />
+                                        <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 2 </text>
+                                    </svg>
+                                </td>
+                                <td class="border-0  btn-panel-f-r-symb-text"><p class="mt-0"> Not Answered </p></td>
+                            </tr>
+
+                            <tr>
+                                <td class="border-0 btn-panel-s-r-symb">
+                                    <!-- for circle button -->
+                                    <svg width="35" height="35">
+                                        <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="white" />
+                                            <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                            <stop offset="100%" stop-color="lightgray" />
+                                        </linearGradient>
+
+                                        <a href="#">
+                                            <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91" stroke-width="1" />
+                                            <text x="18" y="18" fill="#000" text-anchor="middle" alignment-baseline="middle"> 1 </text>
+                                        </a>
+                                    </svg>
+                                </td>
+                                <td class="border-0 btn-panel-s-r-symb-text"><p> Not Visited </p></td>
+
+                                <td class="border-0 btn-panel-t-r-symb">
+                                    <!-- for square button -->
+                                    <svg width="35" height="35">
+                                        <linearGradient id="Gradient4" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="#FFE633" />
+                                            <!-- <stop offset="50%" stop-color="black" stop-opacity="0"/> -->
+                                            <stop offset="100%" stop-color="mediumarchid" />
+                                        </linearGradient>
+
+                                        <rect width="35" height="35" rx="10px"
+                                            style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1; border-radius: 20px;" />
+                                        <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3 </text>
+                                    </svg>
+                                </td>
+                                <td class="border-0 btn-panel-t-r-symb-text"><p> Marked for Review </p></td>
+                            </tr>
+
+                        <!-- answered but not consider for evaluation style="display:none" -->
+                            <tr style="display: none">
+                                <td class="border-0 btn-panel-t-r-symb">
+                                    <!-- for square button -->
+                                    <svg width="35" height="35">
+                                        <rect width="35" height="35" rx="10px"
+                                            style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1;" />
+                                        <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3 </text>
+                                        <a href="#">
+                                            <circle type="checkbox" cx="28" cy="28" r="7" fill="url(#Gradient1)"
+                                                stroke="#938c91" stroke-width="1" />
+                                        </a>
+                                    </svg>
+                                </td>
+                                <td class="border-0 btn-panel-t-r-symb-text" colspan="3">
+                                    <p> Answered & Marked for Review (will be considered for evaluation) </p>
+                                </td>
+                            </tr>
+                            <!-- answered but not consider for evaluation style="display:none" -->
+
+                            <!-- answered and consider for evaluation style="display:none" -->
+                             <tr>
+                                <td class="border-0 btn-panel-t-r-symb">
+                                    <!-- for square button -->
+                                    <svg width="35" height="35">
+                                        <rect width="35" height="35" rx="10px"
+                                            style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1;" />
+                                        <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3 </text>
+                                              <pattern id="marked-consider-img"  width="21" height="21">
+                                                    <image href="assets/icons/good_or_tick.png" x="0" y="0" width="14" height="14" />
+                                                  </pattern>
+                                        <a href="#">
+                                            <circle type="checkbox" cx="28" cy="28" r="7" fill="url(#marked-consider-img)" 
+                                                stroke="#938c91" stroke-width="1" />
+                                        </a>
+                                    </svg>
+                                </td>
+                                <td class="border-0 btn-panel-t-r-symb-text" colspan="3" >
+                                    <p> Answered & Marked for Review (will be considered for evaluation) </p>
+                                </td>
+                            </tr>
+                            <!-- end answered and consider for evaluation -->
+                        </table>
+                    </div>
+                </div>
+                <!--end button pannel symbol section -->
+
+                <!-- button panel current section display -->
+                <div class="row btn-panel-crnt-sec-dsly"><p> Section 1</p></div>
+                <!-- end button panel current section display -->
+
+                <!--button panel questions information display -->
+                <div class="row btn-panel-ques-info-dsly">
+                    <!-- buttons -->
+                    <div class="col-lg-12">
+                        <table class="table">
+                            <thead>
+                                <tr>choose a Question</tr>
+                            </thead>
+                            <tbody >
+                                <tr>
+                                    <td class="border-0 p-0 pt-2">
+                                        <!-- for ploygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="10,0 26,0 35,15   35,35 0,35 0,15" style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 1 </text>
+                                        </svg>
+                                    </td>
+
+                                    <td class="border-0 p-0 pt-2">
+                                        <!-- for ploygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="10,0 26,0 35,15   35,35 0,35 0,15" style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 2 </text>
+                                        </svg>
+                                    </td>
+
+                                    <td class="border-0 p-0 pt-2">
+                                        <!-- reverse polygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="0,0 35,0 35,20    26,35 10,35 0,20" style="fill:url(#Gradient2); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3 </text>
+                                        </svg>
+                                    </td>
+
+                                    <td class="border-0 p-0 pt-2">
+                                        <!-- for ploygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="10,0 26,0 35,15   35,35 0,35 0,15" style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 4 </text>
+                                        </svg>
+                                    </td>
+
+                                    <td class="border-0 p-0 pt-2">
+                                        <!-- for reverse ploygon button -->
+                                        <svg height="35" width="35">
+                                            <polygon points="0,0 35,0 35,20    26,35 10,35 0,20" style="fill: url(#Gradient2); stroke:#938c91;stroke-width:1;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 5 </text>
+                                        </svg>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="border-0 p-0 pt-2">
+                                        <!-- for squire button -->
+                                        <svg width="35" height="35">
+                                            <linearGradient id="Gradient4" x1="0" x2="0" y1="0" y2="1">
+                                                <stop offset="0%" stop-color="fuchsia" />
+                                                <stop offset="100%" stop-color="mediumarchid" />
+                                            </linearGradient>
+                                            <rect width="35" height="35" rx="10px" style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1; border-radius: 20px;" />
+                                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3 </text>
+                                        </svg>
+                                    </td>
+
+                                    <td class="border-0 p-0 pt-2">
+                                        <!-- for circle button -->
+                                        <svg width="35" height="35">
+                                            <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                                <stop offset="0%" stop-color="white" />
+                                                <stop offset="100%" stop-color="lightgray" />
+                                            </linearGradient>
+                                            <a href="#">
+                                                <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91" stroke-width="1" />
+                                                <text x="18" y="18" fill="#000" text-anchor="middle" alignment-baseline="middle"> 1 </text>
+                                            </a>
+                                        </svg>
+                                    </td>
+
+                                    <td class="border-0 p-0 pt-2">
+                                        <!-- for circle button -->
+                                        <svg width="35" height="35">
+                                            <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                                <stop offset="0%" stop-color="white" />
+                                                <stop offset="100%" stop-color="lightgray" />
+                                            </linearGradient>
+                                            <a href="#">
+                                                <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91" stroke-width="1" />
+                                                <text x="18" y="18" fill="#000" text-anchor="middle" alignment-baseline="middle"> 1 </text>
+                                            </a>
+                                        </svg>
+                                    </td>
+
+                                    <td class="border-0" style="padding: 3% 0% 0% 0%">
+                                        <!-- for circle button -->
+                                        <svg width="35" height="35">
+                                            <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                                <stop offset="0%" stop-color="white" />
+                                                <stop offset="100%" stop-color="lightgray" />
+                                            </linearGradient>
+                                            <a href="#">
+                                                <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91" stroke-width="1" />
+                                                <text x="18" y="18" fill="#000" text-anchor="middle" alignment-baseline="middle"> 1 </text>
+                                            </a>
+                                        </svg>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--end button panel questions information display  -->
+            </div>
+        <!-- end of body left section -->
+
+
+        <!-- body right section -->
+        <!-- question information display section -->
+            <div class="col-lg-10 ques-info-sec">
+                <!-- question information data display -->
+                <div class="row ques-info-data">
+                    <div class="col-lg-4"> Question Type :Multiple Choice Question </div>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <div class="ques-info-data-marks"> Marks for correct answer 1 | Negative Marks <span> 0.5 </span></div>
+                    </div>
+                </div>
+
+                <!-- question information view in -->
+                <div class="row ques-info-view">
+                    <div class="col-lg-12">
+                        <div class="pull-right mt-2">
+                            <span> View in </span>
+                            <select>
+                                <option value="english" selected>English</option>
+                                <option value="hindi">Hindi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- question display -->
+                <div class="container-fluid ques-display-sec">
+                    <!-- question number display -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="font-weight-bold">Question No. 4</p>
+                        </div>
+                    </div>
+
+                    <!-- question and its option display -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table ques-ans">
+                                <!-- question container -->
+                                <thead>
+                                    <tr>
+                                        <td class="border-0">please listen to the audio and name the American President referred in the Audio </td>
+                                    </tr>
+                                </thead>
+                                <!-- answer conatainer -->
+                                <tbody>
+                                      <tr>
+                                        <td scope="col" class="border-0"><input type="radio" name="radio"> <p> Barack Obama</p></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td scope="col" class="border-0"><input type="radio" name="radio"><p> George Bush</p> </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="col" class="border-0"><input type="radio"name="radio"><p> Bill Clinton</p> </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="col" class="border-0"><input type="radio"name="radio"><p> Donald Trump </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of body right section -->
+        </div>
+     <!-- End Body section-->
+
+
+   <!--bottom section -->
+        <div class="row mr-0">
+            <div class="col-lg-2 bottom-btn-submit">
+                <button class="btn btn-primary" type="button" onclick="window.location.href='qt-mcq.html'">Submit </button>
+            </div>
+            <div class="col-lg-10" style=" width: 100%; height: 50px; margin-top: 5px;">
+                <button class="btn btn-primary pull-left mr-3 mt-2" type="button" onclick="window.location.href='qt-mcq.html'">Mark For Review & Next</button>
+                <button class="btn btn-primary pull-left mt-2" type="button" onclick="window.location.href='qt-mcq.html'"> Clear Response</button>
+                <button class="btn btn-primary pull-right mt-2" type="button" onclick="window.location.href='qt-mcq.html'">Save & Next</button>
+            </div>
+        </div>
+    <!-- End Bottom section -->
+
+        <!-- footer section -->
+        <div class="container-fluid">
+        </div>
+        <!-- End Footer section -->
+</div>
+<!-- End of main container -->
+
+
+
+    <!-- ########################################################################### MODAL ############################################################# -->
+    <!--first modal  -->
+    <!-- modal for instruction  -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModalInstruction" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div>
+                            <!-- machine instruction start-->
+                            <div class="container-fluid modal-inner-top-bar">
+                                <p>Instruction</p>
+                            </div>
+                            <!-- instruction view in -->
+                            <div class="container-fluid modal-info-view-sec">
+                                <div class="modal-info-view">
+                                    <span> View in </span>
+                                    <select>
+                                        <option value="english" selected>English</option>
+                                        <option value="hindi">Hindi</option>
+                                    </select>
+                                </div>
+
+                                <p class="modal-instruction-heading"> Please read the istruction carefully</p>
+
+                                <h6 class="text-left"><u>General Instruction:</u></h6>
+
+                                <div class="modal-inner-content">
+                                    <ol start="1">
+                                        <li>Total duration of examination is 100 minutes.</li>
+                                        <li>The clock will be set at the server. The countdown timer in the top right
+                                            corner of
+                                            screen will display the remaining time available for you to complete the
+                                            examination. When the timer reaches zero, the examination will end by
+                                            itself. You will
+                                            not be required to end or submit your exam.</li>
+                                        <li> The Question palette display on the right side of screen will show the
+                                            status of each
+                                            question using one of the following symbols
+                                            You have not visited the question yet.
+                                            <ol style=" list-style-type:none;">
+                                                <li>You have not visited the question yet</li>
+                                                <li>You have not answered the question</li>
+                                                <li>You have answered the question</li>
+                                                <li>You have NOT answered the question, but have marked the question for
+                                                    review</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <!-- q-instruction start -->
+                            <div class="container-fluid modal-inner-top-bar">
+                                <p >Other Important Instruction</p>
+                            </div>
+
+                            <div class="container-fluid modal-info-view-sec">
+                                <div class="modal-info-view">
+                                    <span > View in </span>
+                                    <select >
+                                        <option value="english" selected>English</option>
+                                        <option value="hindi">Hindi</option>
+                                    </select>
+                                </div>
+
+                                <p class="modal-instruction-heading">Please read the instruction carefully</p>
+
+                                <h6 class="text-left "><u>General Instruction:</u></h6>
+
+                                <div class="modal-inner-content">
+                                    <ol start="1">
+                                        <li>Total duration of examination is 100 minutes.</li>
+                                        <li>The clock will be set at the server. The countdown timer in the top right
+                                            corner of
+                                            screen will display the remaining time available for you to complete the
+                                            examination. When the timer reaches zero, the examination will end by
+                                            itself. You will
+                                            not be required to end or submit your exam.</li>
+                                        <li> The Question palette display on the right side of screen will show the
+                                            status of each
+                                            question using one of the following <br> symbols
+                                            You have not visited the question yet.
+                                            <ol style=" list-style-type:none;">
+                                                <li>You have not visited the question yet</li>
+                                                <li>You have not answered the question</li>
+                                                <li>You have answered the question</li>
+                                                <li>You have NOT answered the question, but have marked the question for
+                                                    review</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of modal for instruction  -->
+
+
+
+    <!-- second modal -->
+    <!-- modal for question paper -->
+    <div class="container">
+       
+        <!-- Modal -->
+        <div class="modal fade" id="myModalQuestionPaper" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div>
+                            <!-- Section A start-->
+                            <div class="container-fluid modal-inner-top-bar">
+                                <p class="text-center">section <span> A</span></p>
+                            </div>
+
+                            <div class="container-fluid .modal-instruction-heading-ques-paper">
+                                <div class="modal-inner-content">
+                                    <ol start="1">
+                                        <li class="pt-1">please listen to the audio and name the American President referred in the Audio
+                                            <ol class="row pl-4" type="a">
+                                                <li class="col-lg-6 pl-0">Barack Obama</li>
+                                                <li class="col-lg-6 pl-0">George Bush</li>
+                                                <li class="col-lg-6 pl-0">Bill Clinton</li>
+                                                <li class="col-lg-6 pl-0"> Donald Trump</li>
+                                            </ol>
+                                        </li>
+                                        <li class="pt-2">Correct HTML Tag For The Largest Heading Is
+                                            <ol class="row pl-4" type="a">
+                                                <li class="col-lg-6 pl-0">h6</li>
+                                                <li class="col-lg-6 pl-0">heading</li>
+                                                <li class="col-lg-6 pl-0">h1</li>
+                                                <li class="col-lg-6 pl-0"> head</li>
+                                            </ol>
+                                        </li>
+                                        <li class="pt-2">All Elements Are Identified By Their __________ And
+                                            Are Marked Up Using Either Start Tags And End Tags Or Self-closing Tags
+                                            <ol class="row pl-4" type="a">
+                                                <li class="col-lg-6 pl-0">Body</li>
+                                                <li class="col-lg-6 pl-0">base </li>
+                                                <li class="col-lg-6 pl-0">head</li>
+                                                <li class="col-lg-6 pl-0"> none of the above</li>
+                                            </ol>
+                                        </li>
+                                        <li class="pt-2"> The __________ Element Represents A Span Of Text  That Is Isolated From Its Surroundings For The Purposes Of Bidirectional Text Formatting
+                                            <ol class="row pl-4" type="a">
+                                                <li class="col-lg-6 pl-0">Barack Obama</li>
+                                                <li class="col-lg-6 pl-0">George Bush</li>
+                                                <li class="col-lg-6 pl-0">Bill Clinton</li>
+                                                <li class="col-lg-6 pl-0"> Donald Trump</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                                                        <!-- Section B start-->
+                                                        <div class="container-fluid modal-inner-top-bar">
+                                                                <p class="text-center">section <span> A</span></p>
+                                                            </div>
+                                
+                                                            <div class="container-fluid .modal-instruction-heading-ques-paper">
+                                                                <div class="modal-inner-content">
+                                                                    <ol start="1">
+                                                                        <li class="pt-1">please listen to the audio and name the American President referred in the Audio
+                                                                            <ol class="row pl-4" type="a">
+                                                                                <li class="col-lg-6 pl-0">Barack Obama</li>
+                                                                                <li class="col-lg-6 pl-0">George Bush</li>
+                                                                                <li class="col-lg-6 pl-0">Bill Clinton</li>
+                                                                                <li class="col-lg-6 pl-0"> Donald Trump</li>
+                                                                            </ol>
+                                                                        </li>
+                                                                        <li class="pt-2">Correct HTML Tag For The Largest Heading Is
+                                                                            <ol class="row pl-4" type="a">
+                                                                                <li class="col-lg-6 pl-0">h6</li>
+                                                                                <li class="col-lg-6 pl-0">heading</li>
+                                                                                <li class="col-lg-6 pl-0">h1</li>
+                                                                                <li class="col-lg-6 pl-0"> head</li>
+                                                                            </ol>
+                                                                        </li>
+                                                                        <li class="pt-2">All Elements Are Identified By Their __________ And
+                                                                            Are Marked Up Using Either Start Tags And End Tags Or Self-closing Tags
+                                                                            <ol class="row pl-4" type="a">
+                                                                                <li class="col-lg-6 pl-0">Body</li>
+                                                                                <li class="col-lg-6 pl-0">base </li>
+                                                                                <li class="col-lg-6 pl-0">head</li>
+                                                                                <li class="col-lg-6 pl-0"> none of the above</li>
+                                                                            </ol>
+                                                                        </li>
+                                                                        <li class="pt-2"> The __________ Element Represents A Span Of Text  That Is Isolated From Its Surroundings For The Purposes Of Bidirectional Text Formatting
+                                                                            <ol class="row pl-4" type="a">
+                                                                                <li class="col-lg-6 pl-0">Barack Obama</li>
+                                                                                <li class="col-lg-6 pl-0">George Bush</li>
+                                                                                <li class="col-lg-6 pl-0">Bill Clinton</li>
+                                                                                <li class="col-lg-6 pl-0"> Donald Trump</li>
+                                                                            </ol>
+                                                                        </li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End of modal for question paper -->
+
+    <!--third modal  -->
+    <!-- modal for usefull data  -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModalUsefullData" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div>
+                            <!-- instruction start-->
+                            <div class="container-fluid modal-inner-top-bar">
+                                <p>Usefull Data</p>
+                            </div>
+
+                            <div class="container-fluid modal-info-view-sec">
+                                <div class="modal-info-view"> <span > View in </span>
+                                    <select>
+                                        <option value="english" selected>English</option>
+                                        <option value="hindi">Hindi</option>
+                                    </select>
+                                </div>
+
+                                <div class="modal-inner-content" >
+                                    <ul>
+                                        <li> AREA(A)
+                                            <ul class="pl-5">
+                                                <li>Square A =x2; Where x = any side of the square</li>
+                                                <li>Ractangle A =lw; Where l = length and w = width</li>
+                                                <li>Parallelogram A = bh; Where b= base and h=height</li>
+                                                <li>Triangle A = 1/2bh; where b = base and h= height</li>
+                                                <li>Circle A = Pie r2; Where pie = 3.14 and r = radius</li>
+                                                <li>Trapezoid A = 1/2(b1 + b2)h; </li>
+                                                <li>Sphere S = 4pie r2 ; Where s = Surface area</li>
+                                            </ul>
+                                        </li>
+                                        <hr>
+                                        <li>SURFACE AREA (SA)of a:
+                                            <ul class="pl-5">
+                                                <li> cube SA = 6s2 Where s = any side</li>
+                                                <li>Cylinder (lateral) SA = 2 pie r h; Where pie = 3.14, r = radius</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of modal for usefull data  -->
+
+    <!--fourth modal  -->
+    <!-- modal for Group instruction  -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModalGroupInstruction" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div>
+                            <!-- machine instruction start-->
+                            <div class="container-fluid modal-inner-top-bar">
+                                <p>Group Instruction</p>
+                            </div>
+
+                            <div class="container-fluid modal-info-view-sec">
+                                <div class="modal-info-view">
+                                    <span> View in </span>
+                                    <select>
+                                        <option value="english" selected>English</option>
+                                        <option value="hindi">Hindi</option>
+                                    </select>
+                                </div>
+
+                                <div class="modal-inner-content">
+                                    <ul>
+                                        <li>In this group 'Psychometric Question' you will be able to see an image.</li>
+                                        <li>Please go through the same carefully and answer the questions asked in the group ' Psychometric Test' carefully.</li>
+                                        <li> The maximum time allotted to view the image is 1 minute.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of modal for Group instruction  -->
+
+    <!-- ####################################################################  End  Modal ################################################################-->
+
+
+    <!-- question count samll popup on mouse hover on i icon -->
+    <div class="section-info-box">
+        <!-- question information popup section -->
+        <table class="ques-info-popup-sec" style="">
+            <thead style="">
+                <tr>
+                    <td colspan="2"><p> Section 1</p></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border-0 ques-info-popup-symb" style=" ">
+                        <!-- for ploygon button -->
+                        <svg height="35" width="35">
+                            <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="0%" stop-color="lime" />
+                                <stop offset="100%" stop-color="forestgreen" />
+                            </linearGradient>
+                            <polygon points="10,0 26,0 35,15   35,35 0,35 0,15" style="fill:url(#Gradient1); stroke:#938c91;stroke-width:1;" />
+                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3 </text>
+                        </svg>
+                    </td>
+                    <td class="border-0 ques-info-popup-symb-text"><p> Answered </p> </td>
+                </tr>
+
+                <tr>
+                    <td class="border-0 ques-info-popup-symb" >
+                        <!-- for reverse ploygon button -->
+                        <svg height="35" width="35">
+                            <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="0%" stop-color="lightcoral" />
+                                <stop offset="100%" stop-color="red" />
+                            </linearGradient>
+                            <polygon points="0,0 35,0 35,20    26,35 10,35 0,20" style="fill:url(#Gradient2); stroke:#938c91;stroke-width:1;" />
+                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 2 </text>
+                        </svg>
+                    </td>
+                    <td class="border-0 ques-info-popup-symb-text"> <p> Not Answered </p> </td>
+                </tr>
+
+                <tr>
+                    <td class="border-0 ques-info-popup-symb">
+                        <!-- for circle button -->
+                        <svg width="35" height="35">
+                            <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="0%" stop-color="white" />
+                                <stop offset="100%" stop-color="lightgray" />
+                            </linearGradient>
+                            <a href="#">
+                                <circle cx="17" cy="17" r="17" fill="url(#Gradient3)" stroke="#938c91" stroke-width="1" />
+                                <text x="18" y="18" fill="#000" text-anchor="middle" alignment-baseline="middle"> 1 </text>
+                            </a>
+                        </svg>
+                    </td>
+                    <td class="border-0 ques-info-popup-symb-text"><p> Not Visited </p> </td>
+                </tr>
+
+                <tr>
+                    <td class="border-0 ques-info-popup-symb" >
+                        <!-- for square button -->
+                        <svg width="35" height="35">
+                            <linearGradient id="Gradient4" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="0%" stop-color="fuchsia" />
+                                <stop offset="100%" stop-color="mediumarchid" />
+                            </linearGradient>
+                            <rect width="35" height="35" rx="10px" style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1; border-radius: 20px;" />
+                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3</text>
+                        </svg>
+                    </td>
+                    <td class="border-0 ques-info-popup-symb-text" ><p> Marked for Review </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="border-0 ques-info-popup-symb">
+                        <!-- for square button -->
+                        <svg width="35" height="35">
+                            <rect width="35" height="35" rx="10px" style="fill:url(#Gradient4);stroke:#938c91;stroke-width:1;" />
+                            <text x="18" y="18" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle"> 3 </text>
+                            <a href="#">
+                                <circle cx="28" cy="28" r="7" fill="url(#Gradient1)" stroke="#938c91" stroke-width="1" />
+                            </a>
+                        </svg> 
+                    </td>
+                    <td class="border-0 mb-0 mt-0 ques-info-popup-symb-text"><p> Answered & Marked for Review (will be considered for evaluation) </p>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!--end question count samll popup on mouse hover on i icon -->
+
+    <script src="assets/js/script.js"></script>
+    <!-- <script> -->
+    <!-- instruction modal
+// $(function() {
+// $('[data-toggle="modal"]').hover(function() {
+//   var basicExampleModal = $(this).data('target');
+//   $(basicExampleModal).modal('show');
+// });
+// }); -->
+    <!-- </script> -->
+</body>
+
+</html>
